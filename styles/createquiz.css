@@ -1,0 +1,162 @@
+body {
+    background-color: rgb(250, 250, 250);
+}
+
+.spacer {
+    background-color: rgb(16, 16, 16);
+}
+
+.titlebox {
+    margin: 25px 0 50px 0;
+}
+
+h1 {
+    font-family: 'League Mono';
+    font-style:  normal;
+    font-weight: bold;
+    font-size: 90px;
+
+    color: rgb(16, 16, 16);
+    opacity: 0.8;
+
+    text-align: center;
+}
+
+h2 {
+    font-family: 'League Mono';
+    font-style:  normal;
+    font-weight: 300;
+    font-size: 30px;
+
+    color: rgb(16, 16, 16);
+    opacity: 0.8;
+
+    text-align: center;   
+}
+
+body, * {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.block {
+    display: block;
+}
+
+.datafield {
+    padding-left: 25px;
+    padding-top: 20px;
+}
+
+label {
+    display: block;
+    padding-right: 10px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.number {
+    padding-top: 30px;
+    margin-bottom: 0;
+}
+
+fieldset {
+    border-color:rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 75%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    opacity: 0.8;
+}
+
+legend {
+    padding: 10px 5px 0 5px;
+}   
+
+option, select {
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+}
+
+textarea, input{
+    width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+}
+
+textarea, input, select {
+    margin-bottom: 10px;
+}
+
+textarea {
+    font-family: 'League Mono';
+    font-weight: 300;
+    font-style: normal;
+    height: 15%;
+}
+
+button {
+    margin: 15px;
+    margin-top: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+    background-color: #f8f8f8;
+
+}
+
+button:hover, button:disabled  {
+    background-color: #eeeeee;
+}
+
+button:active {
+    background-color: #dddddd;
+}
+
+.question {
+    padding-bottom: 25px;
+}
+
+.question:nth-of-type(even) {
+    background-color: rgb(240, 240, 240);
+}
+
+.datafield > button {
+    margin-left: 0;
+    margin-top: 15px;
+}
+
+.question {
+    padding-left: 25px;
+}
+
+.mid {
+    margin: 15px auto;
+    margin-top: 0;
+    padding: 15px;
+}
+
+.message {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 10px auto;
+    color: rgb(252, 97, 97);
+}
+
+.success {
+    color: rgb(147, 207, 58);
+}
+
+.quizfield {
+    margin-bottom: 20px;
+}
+
+.explain {
+    height: 10%;
+}

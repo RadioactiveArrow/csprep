@@ -1,0 +1,210 @@
+body {
+    background-color: rgb(16, 16, 16);
+    background-image: linear-gradient(rgba(16, 16, 16, 0.85), rgba(16, 16, 16, 0.85), rgba(16,16,16,1)), url('../media/bkg.jpg');
+    background-size: cover;
+    color: #2A2A2A;
+}
+
+.spacer {
+    display: block;
+    height: 60px;
+    width: 100%;
+}
+
+.link-container {
+    margin: 3% 5% 2% 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.link-container > * > a {
+    padding-right: 100px;
+}
+
+h1 > a {
+    font-family: 'League Mono';
+    font-style:  normal;
+    font-weight: bold;
+    font-size: 300%;
+
+    color: white;
+    opacity: 0.8;
+}
+
+h2 > a, h2 > a:visited {
+    font-family: 'League Mono';
+    font-style:  normal;
+    font-weight: 200;
+    font-size: 200%;
+
+    text-decoration: none;
+    color: rgb(158, 182, 224);
+}
+
+
+h2 > a:hover, h2 > a:hover:visited {
+    text-decoration: underline;
+}
+
+h2 > a:active, h2 > a:hover:active {
+    color: #7f9ed3;
+}
+
+
+.quiztable {
+    width: 90%;
+    margin: 0 5% 0 5%;
+    background-color: rgba(255, 255, 255,0.85);
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+
+th {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: left;
+
+    border: 0px none;
+    padding: 15px 0 10px 25px;
+    color: rgba(65, 65, 65, 0.8);
+}
+
+td {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: left;
+
+    border: 2px solid rgba(156, 156, 156, 0.8);
+    border-left: 0px none;
+    border-right: 0px none;
+    padding: 16px 0;
+    padding-left: 25px;
+    color: #2A2A2A;
+}
+
+tr:last-child > td {
+    border-bottom: 0px;
+}
+
+.button {
+    display: block;
+    text-decoration: none;
+
+    font-family: "Inter";
+    font-weight: 300;
+    font-size: 18px;
+
+    color: #FFF;
+    background-color: #477EDE;
+
+    padding: 15px 25px;
+    margin: 0;
+
+    opacity: 0.9;
+
+    text-align: center;
+    border-radius: 10px;
+
+    width: 50%;
+    transition: 0.25s;
+
+    border: none;
+}
+
+.button:hover,
+.button:visited:hover {
+    background-color: #2669db;
+    opacity: 0.7;
+}
+
+.button:active,
+.button:visited:active {
+    background-color: #225dc4;
+}
+
+.take, .take:visited{
+    background-color: rgb(87, 170, 99);
+}
+
+.take:hover, .take:visited:hover{
+    background-color: rgb(90, 173, 102);
+}
+
+.take:active, .take:visited:active{
+    background-color: rgb(89, 172, 101);
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    
+    .link-container {
+        display: block;
+        margin: 5%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .button, td, th {
+        font-size: 1em;
+        padding: 5px;
+        width: 100%;
+    }
+
+    td:nth-of-type(3), th:nth-of-type(3) {
+        display: none;
+    }
+
+    .button {
+        font-size: .75em;
+        padding: 10px;
+        width: 8em;
+    }
+
+    th {
+        font-size: .75em;
+    }
+
+    h1 > a{
+        font-size: 1.5em;
+        padding: 0;
+    }
+
+    a.headertext {
+        padding: 0;
+    }
+
+
+    .header {
+        padding: 0 5.0% 0 5.0%;
+    }
+
+    .logo {
+        margin: 0;
+        padding: 0;
+        width: 9em;
+    }
+
+    .content {
+        font-size: 95%;
+    }
+
+    .page-title {
+        display: none;
+    }
+
+    .right-container>li:first-of-type {
+        margin-right: 20px;
+    }
+
+    script {
+        display: none;
+    }
+}

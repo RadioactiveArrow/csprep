@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parallax {
+    background-color: rgb(16, 16, 16);
+    background-image: linear-gradient(rgba(16, 16, 16, 0.5), rgba(16,16,16,0.5)), url('../media/bkg.jpg');
+    background-size: cover;
+    height: 100;
+    color: white;
+}
+
+.spacer {
+    display: block;
+    height: 60px;
+    width: 100%;
+}
+
+.hero {
+    display: block;
+    margin: 40px 5% 100px 5%;
+}
+
+h1 {
+    font-family: 'League Mono';
+    font-weight: 200;
+    font-style: normal; 
+    font-size: 80px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+h1 > bold {
+    font-family: 'League Mono';
+    font-weight: 600;
+    font-style: normal;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+
+    font-family: 'League Mono';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25px;
+
+    color: #0c3872;
+    background-color: #eeeeee;
+    padding: 15px;
+    text-align: center;
+    opacity: 1;
+    border-radius: 10px;
+
+    width: 250px;
+    transition: 0.25s;
+
+    margin-top: 40px;
+    margin-right: 45px;
+    border: none;
+}
+
+.button:hover, .button:visited:hover{
+    background-color: #ffffff;
+    opacity: 0.7;
+}
+
+.columns {
+    background-color: #ffffff;
+    opacity: .95;
+}
+
+.columns {
+    padding: 100px 0 100px 0;
+
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.columns > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+h3 {
+    padding-top: 30px;
+
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 42px;
+
+    text-decoration: none;
+    text-align: center;
+    color: #0c366a;
+
+}
+
+.cimg {
+    height: 110px;
+    width: 110px;
+    filter: invert(17%) sepia(36%) saturate(2441%) hue-rotate(190deg) brightness(80%) contrast(101%);
+}
+
+.end {
+    padding-top: 30px;
+    margin: 30px 5% 20px 5%;
+}
+
+.foothead {
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 4em;
+}
+
+.footer  {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0 0;
+}
+
+.blogo {
+    width: 20em;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+  
+.footer-content, .footer > .links > *, .footer-content:visited {
+    display: inline;
+    text-decoration: none;
+
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.1em;  
+
+    color: white;
+}
+
+.links > li:not(:last-of-type) {
+    margin-right: 30px;
+}
+
+.links {
+    text-align: center;
+}
+
+.links a:hover,
+.links a:visited:hover {
+    text-shadow: 0px 0px 8px #ffffff;
+}
+
+.links a:hover:active,
+.links a:visited:hover:active {
+    text-shadow: 0px 0px 8px #dadada;
+    color: #eeeeee;
+}
+
+/*Mobile*/
+@media only screen and (max-width: 900px) {
+    .colhead {
+        font-size: 2em;
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .button{
+        margin-right: 20px;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .colhead {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        width: fit-content;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button {
+        margin-right: 0;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .columns {
+        padding: 0 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-evenly;
+    }
+
+    .columns > * {
+        margin: 0 auto;
+    }
+
+    .cimg {
+        width: 30%;
+        margin-top: 2em;
+    }
+
+    .colhead {
+        font-size: 2em;
+        font-weight: 800;
+        padding-top: 5px;
+    }
+
+    .colhead:last-of-type {
+        padding-bottom: 1em;
+    }
+
+    .foothead {
+        font-family: Inter, Helvetica, Arial, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2em;
+    }
+    
+    .blogo {
+        width: 15em;
+    }
+
+    .footer-content, .footer-content:visited{
+        font-size: 80%;
+    }
+}

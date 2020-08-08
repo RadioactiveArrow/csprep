@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+
+    z-index: 999;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5% 0 5%;
+
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 3px 6px #00000029;
+
+
+    -webkit-transition: background .25s ease-out, height .25s ease-out, -webkit-transform .3s ease-out;
+    transition: background .25s ease-out, height .25s ease-out, transform .3s ease-out, -webkit-transform .3s ease-out;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-title {
+    position: relative;
+    width: auto;
+    left: 40px;
+}
+
+.logo {
+    height: 30px;
+    opacity: 1;
+}
+
+.right-container>li {
+    display: inline;
+    text-decoration: none;
+}
+
+.right-container>li:first-of-type {
+    margin-right: 40px;
+}
+
+.content {
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.1em;
+
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    color: black;
+    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(339deg) brightness(96%) contrast(104%);
+}
+
+.transparent {
+    background: transparent;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.transparent>*>.content,
+.transparent>*>*>.content {
+    color: white;
+}
+
+.main-container>a {
+    text-decoration: none;
+}
+
+.transparent .logo {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(108deg) brightness(104%) contrast(104%);
+}
+
+.underline:hover,
+.underline:visited:hover {
+    text-shadow: 0px 0px 8px #3a3a3a;
+}
+
+.underline:hover:active,
+.underline:visited:hover:active {
+    text-shadow: 0px 0px 8px #222222;
+    color: #333333;
+}
+
+.transparent .underline:hover,
+.transparent .underline:visited:hover {
+    text-shadow: 0px 0px 8px #ffffff;
+}
+
+.transparent .underline:hover:active,
+.transparent .underline:visited:hover:active {
+    text-shadow: 0px 0px 8px #dadada;
+    color: #eeeeee;
+}
+
+.spacer {
+    display: block;
+    height: 60px;
+    width: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+    .header, .transparent {
+        padding: 0 5.0% 0 5.0%;
+    }
+
+    .logo {
+        margin: 0;
+        padding: 0;
+        width: 9em;
+    }
+
+    .content {
+        font-size: 95%;
+    }
+
+    .page-title {
+        display: none;
+    }
+
+    .right-container>li:first-of-type {
+        margin-right: 20px;
+    }
+
+    script {
+        display: none;
+    }
+}
