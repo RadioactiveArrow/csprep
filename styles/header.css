@@ -5,7 +5,7 @@
 }
 
 .header {
-    position: fixed;
+    position: absolute;
     height: 60px;
     width: 100%;
 
@@ -40,7 +40,7 @@
 }
 
 .logo {
-    height: 30px;
+    height: 24px;
     opacity: 1;
 }
 
@@ -63,7 +63,7 @@
     color: black;
 }
 
-img {
+.logo{
     color: black;
     filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(339deg) brightness(96%) contrast(104%);
 }

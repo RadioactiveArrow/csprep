@@ -244,7 +244,7 @@ if(!isset($_SESSION['admin']) || $_SESSION['admin']==false) {
                                             }
                                         }
                                     }
-                                    echo "<p class='message success'>&#10003&nbsp;Success:</p>";
+                                    echo "<p class='message success'>&#10003&nbsp;Success: Quiz Created!</p>";
                                 }
                             }
                         }

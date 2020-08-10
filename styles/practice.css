@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(16, 16, 16);
-    background-image: linear-gradient(rgba(16, 16, 16, 0.85), rgba(16, 16, 16, 0.85), rgba(16,16,16,1)), url('../media/bkg.jpg');
+    background-color: #222222;
+    background-attachment: fixed;
     background-size: cover;
     color: #2A2A2A;
 }
@@ -27,7 +27,7 @@ h1 > a {
     font-family: 'League Mono';
     font-style:  normal;
     font-weight: bold;
-    font-size: 300%;
+    font-size: 2em;
 
     color: white;
     opacity: 0.8;
@@ -37,7 +37,7 @@ h2 > a, h2 > a:visited {
     font-family: 'League Mono';
     font-style:  normal;
     font-weight: 200;
-    font-size: 200%;
+    font-size: 1.5em;
 
     text-decoration: none;
     color: rgb(158, 182, 224);
@@ -62,7 +62,7 @@ h2 > a:active, h2 > a:hover:active {
 }
 
 th {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-style:  normal;
     font-weight: 500;
     font-size: 18px;
@@ -74,7 +74,7 @@ th {
 }
 
 td {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-style:  normal;
     font-weight: 400;
     font-size: 20px;
@@ -96,7 +96,7 @@ tr:last-child > td {
     display: block;
     text-decoration: none;
 
-    font-family: "Inter";
+    font-family: "Inter", sans-serif;
     font-weight: 300;
     font-size: 18px;
 
@@ -152,13 +152,13 @@ tr:last-child > td {
 }
 
 @media only screen and (max-width: 600px) {
-    .button, td, th {
-        font-size: 1em;
+    .button, td.squeezable, th.squeezable {
+        font-size: 0.75em;
         padding: 5px;
-        width: 100%;
+        /* width: 100%; */
     }
 
-    td:nth-of-type(3), th:nth-of-type(3) {
+    td.non-essential, th.non-essential {
         display: none;
     }
 

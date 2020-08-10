@@ -1,7 +1,11 @@
 <?php
 require 'header.php';
 require './includes/dbh.php';
-if(!isset($_SESSION['userID'])) {
+require './includes/ranks.inc.php';
+
+if (isset($_SESSION['userID'])) {
+    $users = getRankings();
+} else {
     header("Location: index.php");
 }
 ?>
@@ -22,8 +26,25 @@ if(!isset($_SESSION['userID'])) {
             <h2><a class="headertext" href="scores.php">Scores</a></h2>
             <h1><a class="headertext">Rank</a></h1>
         </div>
-        <h1 style="margin: 0 5% 0 5%;"><a class="headertext">This page is not done yet.</a></h1>
     </div>
+    <table class="quiztable">
+        <tr>
+            <th>Rank</th>
+            <th>Username</th>
+            <th>Points</th>
+        </tr>
+        <?php
+        for ($i = 0; $i < sizeof($users); $i++) {
+        ?>
+            <tr class="<?php echo $_SESSION['userUID'] == $users[$i]['userUID'] ? "user" : "other";?>">
+                <td>#<?php echo $i+1 ?></td>
+                <td class="center"><?php echo $users[$i]['userUID']; ?></td>
+                <td class="center"><?php echo $users[$i]['total']; ?></td>
+            </tr>
+        <?php
+        }
+        ?>
+    </table>
 </body>
 
 </html>

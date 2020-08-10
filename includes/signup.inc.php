@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['reg-submit'])) {
     require 'dbh.php';
-    $name = $_POST['e'];
+    $name = $_POST['n'];
     $email = $_POST['e'];
     $username = $_POST['u'];
     $password = $_POST['p'];

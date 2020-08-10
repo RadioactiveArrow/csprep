@@ -31,7 +31,7 @@ form {
 }
 
 h1 {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-style: normal; 
     font-size: 40px;
@@ -69,7 +69,7 @@ h1 {
 }
 
 .sub > p {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-style: normal; 
     font-size: 28px;

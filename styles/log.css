@@ -5,9 +5,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(16, 16, 16, .5), rgba(12, 56, 114, .2), rgba(16, 16, 16, 1)), url('../media/bkg.jpg');
-    background-size: cover;
-    
+    background-color: #222222;
     color: #171717;
 }
 
@@ -30,7 +28,7 @@ body {
 }
 
 .sign-header {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 38px;
@@ -38,7 +36,7 @@ body {
 }
 
 .other {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 18px;
@@ -79,10 +77,20 @@ form>input {
     border-bottom: 3px solid #DBDBDB;
     border-spacing: 10px;
 
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 20px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
 }
 
 form>p {
@@ -90,7 +98,7 @@ form>p {
 
     color: rgb(161, 161, 161);
 
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 18px;
@@ -106,25 +114,27 @@ form>p {
     display: block;
     text-decoration: none;
 
-    font-family: "Inter";
+    font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-size: 18px;
 
     color: #FFF;
     background-color: #477EDE;
 
-    padding: 14px;
-    margin-bottom: 16%;
+    /* padding: 14px; */
+    /* margin-bottom: 16%; */
     margin-left: 95%;
 
     text-align: center;
-    border-radius: 20px;
+    border-radius: 5px;
 
     width: 185px;
     height: 48px;
     transition: 0.25s;
 
     border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .button:hover,

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="618" height="472" viewBox="0 0 618 472">
+  <defs>
+    <filter id="Rectangle_56" x="0" y="19" width="618" height="453" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Component_3_1" data-name="Component 3 – 1" transform="translate(6)">
+    <g transform="matrix(1, 0, 0, 1, -6, 0)" filter="url(#Rectangle_56)">
+      <path id="Rectangle_56-2" data-name="Rectangle 56" d="M0,0H594a0,0,0,0,1,0,0V414a15,15,0,0,1-15,15H15A15,15,0,0,1,0,414V0A0,0,0,0,1,0,0Z" transform="translate(6 25)" fill="#222"/>
+    </g>
+    <g id="Group_18" data-name="Group 18" transform="translate(-100 -1301)">
+      <path id="Rectangle_57" data-name="Rectangle 57" d="M15,0H579a15,15,0,0,1,15,15V27a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V15A15,15,0,0,1,15,0Z" transform="translate(100 1301)" fill="#2d425e"/>
+      <circle id="Ellipse_18" data-name="Ellipse 18" cx="6" cy="6" r="6" transform="translate(125 1309)" fill="#ff5757"/>
+      <circle id="Ellipse_19" data-name="Ellipse 19" cx="6" cy="6" r="6" transform="translate(148 1309)" fill="#ffc47d"/>
+      <circle id="Ellipse_20" data-name="Ellipse 20" cx="6" cy="6" r="6" transform="translate(171 1309)" fill="#7bffa0"/>
+    </g>
+    <line id="Line_54" data-name="Line 54" y2="137" transform="translate(48.5 69.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+    <line id="Line_55" data-name="Line 55" x2="55.02" transform="translate(66.74 75.5)" fill="none" stroke="#7bffa0" stroke-linecap="round" stroke-width="5"/>
+    <line id="Line_56" data-name="Line 56" x2="75.98" transform="translate(66.74 92.619)" fill="none" stroke="#ffc47d" stroke-linecap="round" stroke-width="5"/>
+    <line id="Line_57" data-name="Line 57" x2="20.96" transform="translate(66.74 109.738)" fill="none" stroke="#ff5757" stroke-linecap="round" stroke-width="5"/>
+    <line id="Line_58" data-name="Line 58" x2="63.074" y2="0.238" transform="translate(111.086 109.5)" fill="none" stroke="#7bffa0" stroke-linecap="round" stroke-width="5"/>
+    <line id="Line_59" data-name="Line 59" x2="49.78" transform="translate(142.72 126.857)" fill="none" stroke="#9169ff" stroke-linecap="round" stroke-width="5"/>
+    <line id="Line_60" data-name="Line 60" x2="62.88" transform="translate(111.28 143.977)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="5"/>
+    <line id="Line_61" data-name="Line 61" x2="49.78" transform="translate(142.72 161.096)" fill="none" stroke="#ffc47d" stroke-linecap="round" stroke-width="5"/>
+    <line id="Line_62" data-name="Line 62" x2="131" transform="translate(61.5 178.216)" fill="none" stroke="#9169ff" stroke-linecap="round" stroke-width="5"/>
+    <path id="Path_126" data-name="Path 126" d="M0,0,65.8.085l155.834.2" transform="translate(47.936 234.215)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="8"/>
+    <line id="Line_66" data-name="Line 66" x2="84.32" transform="translate(48.801 258.215)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="8"/>
+    <line id="Line_63" data-name="Line 63" x2="65.5" transform="translate(61.5 195.334)" fill="none" stroke="#7bffa0" stroke-linecap="round" stroke-width="5"/>
+    <line id="Line_64" data-name="Line 64" x2="29.385" y2="0.166" transform="translate(149.654 195.334)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="5"/>
+    <rect id="Rectangle_58" data-name="Rectangle 58" width="498" height="30" rx="7" transform="translate(48 287)" fill="#353535"/>
+    <rect id="Rectangle_59" data-name="Rectangle 59" width="498" height="30" rx="7" transform="translate(48 333)" fill="#98eca3"/>
+    <rect id="Rectangle_60" data-name="Rectangle 60" width="498" height="30" rx="7" transform="translate(48 378)" fill="#353535"/>
+  </g>
+</svg>

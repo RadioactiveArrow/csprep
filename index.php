@@ -1,12 +1,12 @@
 <?php
 require 'header.php';
-if(isset($_SESSION['testID'])) {
+if (isset($_SESSION['testID'])) {
     unset($_SESSION['testID']);
     unset($_SESSION['qNum']);
     unset($_SESSION['qEx']);
     unset($_SESSION['correctAns']);
 }
-if(isset($_SESSION['userUID'])) {
+if (isset($_SESSION['userUID'])) {
     header("Location: ./practice.php");
 }
 ?>
@@ -24,7 +24,35 @@ if(isset($_SESSION['userUID'])) {
 
 </head>
 
-<body class="parallax">
+<body>
+    <div class="hero">
+        <div class="hero-main">
+            <h1 class="hero-text">Prepare for upcoming <strong>UIL CompSci</strong> competitions</h1>
+            <img class="hero-img" src="media/index/programming.svg">
+        </div>
+        <div class="hero-buttons">
+            <a class="button" href="login.php">Sign in with <strong>TompkinsCS</strong></a>
+            <a class="button inverted" href="signup.php">Create a <strong>TompkinsCS</strong> Account</a>
+        </div>
+    </div>
+    <div class="card first">
+        <img class="card-img" src="media/index/quiz.svg">
+        <div class="desc">
+            <h2>Coding Questions from <strong>Real UIL Tests</strong></h2>
+            <p>With 3 difficulty levels, you can get started with something easy or try your hand at the most challenging comp sci problems we have to offer</p>
+        </div>
+    </div>
+    <div class="card second">
+        <div class="desc">
+            <h2>Detailed explanations for <strong>every question</strong></h2>
+            <p>That's right! No more searching stackoverflow for an answer. Each question you submit - right or wrong - has a full explanation on why one answer is correct.</p>
+        </div>
+        <img class="card-img" src="media/index/login.svg">
+    </div>
+</body>
+
+</html>
+<!-- <body class="parallax">
     <div class="spacer"></div>
     <div class="hero" data-aos="fade-up" data-aos-duration="1000">
         <h1>
@@ -66,5 +94,4 @@ if(isset($_SESSION['userUID'])) {
     <script>
         AOS.init();
     </script>
-</body>
-</html>
+</body> -->

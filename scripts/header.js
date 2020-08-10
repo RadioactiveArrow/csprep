@@ -1,5 +1,5 @@
 function onScroll() {
-    var scroll = window.scrollY < 30;
+    var scroll = window.scrollY < window.innerHeight-60;
     if (!$("body").hasClass("log") && !$("body").hasClass("quizgen")) {
         $('.header').toggleClass('transparent', scroll);
     } else {

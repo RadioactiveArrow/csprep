@@ -4,264 +4,270 @@
     box-sizing: border-box;
 }
 
-.parallax {
-    background-color: rgb(16, 16, 16);
-    background-image: linear-gradient(rgba(16, 16, 16, 0.5), rgba(16,16,16,0.5)), url('../media/bkg.jpg');
-    background-size: cover;
-    height: 100;
-    color: white;
-}
-
-.spacer {
-    display: block;
-    height: 60px;
-    width: 100%;
+body {
+    height: 100%;
 }
 
 .hero {
-    display: block;
-    margin: 40px 5% 100px 5%;
+    height: 60%;
+    padding: 20%;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
-h1 {
-    font-family: 'League Mono';
-    font-weight: 200;
-    font-style: normal; 
-    font-size: 80px;
-    opacity: 0.9;
-    margin-bottom: 30px;
+.hero-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-h1 > bold {
-    font-family: 'League Mono';
+.hero-text {
+    color: white;
+    font-family: 'League Mono', sans-serif;
+    font-size: 2.75em;
+    font-weight: 300;
+}
+
+.hero-text>strong {
     font-weight: 600;
-    font-style: normal;
+}
+
+.hero-img {
+    width: 50%;
+}
+
+.hero-buttons {
+    display: flex;
+    padding-top: 7.5%;
 }
 
 .button {
-    display: inline-block;
-    text-decoration: none;
-
-    font-family: 'League Mono';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 25px;
-
-    color: #0c3872;
-    background-color: #eeeeee;
-    padding: 15px;
-    text-align: center;
-    opacity: 1;
-    border-radius: 10px;
-
-    width: 250px;
-    transition: 0.25s;
-
-    margin-top: 40px;
-    margin-right: 45px;
-    border: none;
-}
-
-.button:hover, .button:visited:hover{
-    background-color: #ffffff;
-    opacity: 0.7;
-}
-
-.columns {
-    background-color: #ffffff;
-    opacity: .95;
-}
-
-.columns {
-    padding: 100px 0 100px 0;
-
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-evenly;
-}
-
-.columns > * {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-}
-
-h3 {
-    padding-top: 30px;
-
-    font-family: Inter, Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 42px;
-
+    display: block;
+    margin: 0 20px;
+    padding: 14px 40px;
+    color: #3B3B3B;
+    background-color: #FDFDFD;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
     text-decoration: none;
     text-align: center;
-    color: #0c366a;
-
+    border: 1px solid #FDFDFD;
+    border-radius: 5px;
+    transition: 0.25s ease-in-out;
+    outline: 0;
+    cursor: pointer;
 }
 
-.cimg {
-    height: 110px;
-    width: 110px;
-    filter: invert(17%) sepia(36%) saturate(2441%) hue-rotate(190deg) brightness(80%) contrast(101%);
+.button.inverted {
+    color: #FDFDFD;
+    background-color: #222222;
 }
 
-.end {
-    padding-top: 30px;
-    margin: 30px 5% 20px 5%;
+.button:hover {
+    background-color: #e9e9e9;
 }
 
-.foothead {
-    font-family: Inter, Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 4em;
+.button.inverted:hover {
+    background-color: #e9e9e9;
+    color: #3B3B3B;
 }
 
-.footer  {
+.card {
+    padding: 5% 20%;
+    height: min-content;
     display: flex;
-    flex-direction: column;
-    margin: 20px 0 0 0;
+    justify-content: space-between;
 }
 
-.blogo {
-    width: 20em;
-    margin: 0 auto;
-    padding-top: 50px;
-    padding-bottom: 10px;
+.card-img {
+    width: 40%;
+    transform: translatey(0px);
 }
-  
-.footer-content, .footer > .links > *, .footer-content:visited {
-    display: inline;
-    text-decoration: none;
 
-    font-family: Inter, Helvetica, Arial, sans-serif;
-    font-style: normal;
+.card.first {
+    background-color: #F8F8F8;
+}
+
+.card.first>img {
+    animation: float1 8s ease-in-out infinite;
+}
+
+.card.second {
+    background-color: #D0DDF0;
+}
+
+.card.card.second>img {
+    animation: float2 8s ease-in-out infinite;
+}
+
+.desc {
+    width: 50%;
+}
+
+.desc>h2 {
+    color: #2D425E;
+    font-family: 'League Mono', sans-serif;
+    font-size: 2.75em;
+    font-weight: 300;
+}
+
+.desc>p {
+    color: #213146;
+    padding: 5% 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
     font-weight: 400;
-    font-size: 1.1em;  
-
-    color: white;
 }
 
-.links > li:not(:last-of-type) {
-    margin-right: 30px;
-}
-
-.links {
-    text-align: center;
-}
-
-.links a:hover,
-.links a:visited:hover {
-    text-shadow: 0px 0px 8px #ffffff;
-}
-
-.links a:hover:active,
-.links a:visited:hover:active {
-    text-shadow: 0px 0px 8px #dadada;
-    color: #eeeeee;
-}
-
-/*Mobile*/
-@media only screen and (max-width: 900px) {
-    .colhead {
-        font-size: 2em;
-        font-weight: 600;
-    }
-
-    h1 {
-        font-size: 3em;
-        text-align: center;
-    }
-
-    .button{
-        margin-right: 20px;
-    }
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .colhead {
-        font-size: 1.5em;
-        font-weight: 600;
-    }
-    .hero {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    body {
-        width: fit-content;
-    }
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
+@media screen and (max-width: 1800px) {
     .button {
-        margin-right: 0;
+        font-size: 1.2em;
     }
+}
 
-    .btn-container {
-        display: flex;
-        flex-direction: column;
+@media screen and (max-width: 1475px) {
+    .hero-text, .desc>h2 {
+        font-size: 2.5em;
     }
-
-    .columns {
-        padding: 0 0;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        justify-content: space-evenly;
+    .desc>p {
+        font-size: 1.3em;
     }
+}
 
-    .columns > * {
-        margin: 0 auto;
+@media screen and (max-width: 1280px) {
+    .hero {
+        padding: 20% 5vw;
     }
-
-    .cimg {
+    .hero-text, .desc>h2 {
+        font-size: 2em;
+    }
+    .desc>p {
+        font-size: 1.3em;
+    }
+    .card {
+        padding: 5% 5vw;
+    }
+    .hero-img, .card-img {
         width: 30%;
-        margin-top: 2em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .hero {
+        height: min-content;
+        padding: 12.5% 5vw;
+    }
+    .hero-buttons {
+        display: block;
+    }
+    .hero-buttons>* {
+        margin: 5% 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .hero {
+        display: block;
+        height: min-content;
+        padding: 0 5%;
     }
 
-    .colhead {
-        font-size: 2em;
-        font-weight: 800;
-        padding-top: 5px;
+    .hero-main {
+        display: block;
+        padding: 22.5% 0 5% 0;
     }
 
-    .colhead:last-of-type {
-        padding-bottom: 1em;
+    .hero-text {
+        text-align: center;
+        padding-bottom: 5%;
     }
 
-    .foothead {
-        font-family: Inter, Helvetica, Arial, sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 2em;
+    .hero-img {
+        display: block;
+        margin: 5% auto;
+        padding: 0;
+        width: 60%;
+    }
+
+    .hero-buttons {
+        padding: 0 0 10% 0;
     }
     
-    .blogo {
-        width: 15em;
+    .button {
+        font-size: 1.1em;
+        padding: 5% 0;
     }
 
-    .footer-content, .footer-content:visited{
-        font-size: 80%;
+    .card.first {
+        flex-direction: column;
+        width: 100%;
+        padding: 7.5%;
+    }
+
+    .card-img {
+        display: block;
+        width: 60%;
+        margin: 7.5% auto;
+    }
+
+    .desc {
+        width: 100%;
+    }
+
+    .desc > h2 {
+        /* text-align: center; */
+        font-size: 1.55em;
+    }
+
+    .desc > p {
+        text-align: justify;
+        font-size: 1.1em;
+    }
+
+
+    .card.second {
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 5%;
+    }
+}
+
+@keyframes float1 {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(4px);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+    75% {
+        transform: translateY(6px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(6px);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+    75% {
+        transform: translateY(4px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
