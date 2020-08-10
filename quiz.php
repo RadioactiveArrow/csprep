@@ -37,7 +37,6 @@ require 'header.php';
             <input type="radio" id="e" name="radio"><label class="ans e" for="e" onclick="select('e')">&nbsp;</label>
             <input type="hidden" id="ans" name="choice" value="" />
             <div class="controller">
-                <a class="explain" href="#explain" rel="modal:open">Explanation</a>
                 <label class="ctrl sub">
                     <input type="submit" name="sub" />
                     <p>Submit</p>
@@ -47,6 +46,7 @@ require 'header.php';
                     <p>&#xf125</p>
                 </label>
             </div>
+            <a class="explain" href="#explain" rel="modal:open">Explanation</a>
         </form>
         <div id="explain" class="modal">
             <h1 class="mod">Explanation</h1>

@@ -152,8 +152,12 @@ tr:last-child > td {
 }
 
 @media only screen and (max-width: 600px) {
+    table {
+        margin: 0 auto;
+    }
+
     .button, td.squeezable, th.squeezable {
-        font-size: 0.75em;
+        font-size: 1em;
         padding: 5px;
         /* width: 100%; */
     }
@@ -173,7 +177,7 @@ tr:last-child > td {
     }
 
     h1 > a{
-        font-size: 1.5em;
+        font-size: 1.25em;
         padding: 0;
     }
 

@@ -1,5 +1,5 @@
 body {
-    background-color: #101010;
+    background-color: #222222;
     color: white;
 }
 
@@ -18,8 +18,7 @@ body {
     margin: 0 0 20px 0;
 }
 
-.language-java,
-.line-numbers {
+.language-java, .line-numbers {
     padding: 0;
     margin: 0;
 }
@@ -31,17 +30,16 @@ form {
 }
 
 h1 {
-    font-family: 'League Mono';
+    font-family: 'Inter';
     font-weight: 600;
     font-style: normal;
     font-size: 40px;
     opacity: 0.9;
-
     padding-bottom: 10px;
 }
 
 h1>em {
-    font-family: 'League Mono';
+    font-family: 'Inter';
     font-weight: 200;
     font-style: normal;
 }
@@ -55,6 +53,7 @@ h1>em {
 }
 
 .ctrl {
+    display: block;
     cursor: pointer;
 }
 
@@ -88,7 +87,7 @@ h1>em {
 
 @media only screen and (max-width: 700px) {
     h1 {
-        font-size: 30px;
+        font-size: 1.5em;
     }
     .qex {
         position: relative;
@@ -100,55 +99,45 @@ h1>em {
     opacity: .975;
 }
 
-.modal > p {
+.modal>p {
     color: black;
 }
 
 .button {
     display: block;
     text-decoration: none;
-
     font-family: "League Mono";
     font-weight: 300;
     font-size: 18px;
-
     color: #FFF;
     background-color: #181818;
-
     padding: 7px;
     margin: 10px auto;
-
     text-align: center;
     border-radius: 20px;
-
     width: 100px;
     transition: 0.25s;
-
     border: none;
 }
 
-.button:hover,
-.button:visited:hover {
-    background-color: #000000   ;
+.button:hover, .button:visited:hover {
+    background-color: #000000;
     opacity: 1;
 }
 
-.button:active,
-.button:visited:active {
+.button:active, .button:visited:active {
     background-color: #000000;
 }
 
 .explain, .explain:visited {
+    display: block;
     visibility: hidden;
-
-    position: absolute;
-    left: 5%;
-
+    /* position: absolute; */
+    /* left: 5%; */
     padding-top: 7.5px;
     padding-bottom: 10px;
     color: white;
-
-    font-family: "League Mono";
+    font-family: 'Inter', sans-serif;
     font-size: 1.25em;
     text-decoration: none;
     width: 5%;
@@ -173,13 +162,12 @@ h1.mod {
 p.mod {
     padding: 10px 2px;
     color: #333333;
-
-    font-family: "League Mono";
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1.2em;
 }
 
-.next > p, .prev > p {
+.next>p, .prev>p {
     margin-top: 2px;
     margin-left: 15px;
     margin-right: 15px;
