@@ -57,7 +57,7 @@ if (isset($_SESSION['userUID'])) {
     <title>Review Question</title>
 
     <link rel="stylesheet" href="styles/prism.css">
-    <link rel="stylesheet" href="styles/quiz.css">
+    <link rel="stylesheet" href="styles/review.css">
     <link rel="stylesheet" href="styles/mcradio.css">
     <link rel="stylesheet" href="type/css/iconmonstr-iconic-font.css">
 
