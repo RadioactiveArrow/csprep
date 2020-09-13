@@ -77,28 +77,34 @@ function checkAns() {
         })
         .done(function (data) {
             console.log(data);
-            if(data.existingEntry == true && data.complete == true) {
+            if (data.existingEntry == true && data.complete == true) {
                 window.location.href = "scores.php";
             }
             if (data.correct == true) {
                 $("#" + data.answer).toggleClass("correct", true);
-
-                $("input[type=radio]").prop("disabled", true);
-                $('.explain').css('visibility', 'visible');
-                $('#explain > p').text(data.explain);
                 submitted = true;
             } else if (data.correct == false) {
                 $("#" + data.answer).attr('name', 'radio_ans');
                 $("#" + data.answer).click();
                 $("#" + data.answer).toggleClass("correct", true);
                 $("#" + data.choice).toggleClass("incorrect", true);
-
-                $("input[type=radio]").prop("disabled", true);
-                $('.explain').css('visibility', 'visible');
-                $('#explain > p').text(data.explain);
                 submitted = true;
             }
-            console.log(submitted);
+            if (submitted === true) {
+                $("input[type=radio]").prop("disabled", true);
+                $('.explain').css('visibility', 'visible');
+                $('.explainbody').text(data.explain)
+
+                if(data.complete) {
+                    $('.submit-text').text("Submit Test")
+                } else {
+                    $('.submit-text').text("Next")
+                }
+                $('input[name=sub]').click(function (event) {
+                    event.preventDefault();
+                    next()
+                });
+            }
         });
 }
 
@@ -115,7 +121,7 @@ function next() {
         })
         .done(function (data) {
             if (submitted) {
-                location.reload(false);
+                location.reload();
                 submitted = false;
             }
         });

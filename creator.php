@@ -105,7 +105,7 @@ if(!isset($_SESSION['admin']) || $_SESSION['admin']==false) {
                             <input class="answer" type="title" name="d<?php echo $i; ?>"></input>
                             <label>Answer E:</label>
                             <input class="answer" type="title" name="e<?php echo $i; ?>"></input>
-                            <label>Explanation (Optional):</label>
+                            <label>Explanation:</label>
                             <textarea class="block explain" name="explain<?php echo $i; ?>" rows="10" cols="30" placeholder="The answer is A because ..."></textarea>
                         </div>
                 <?php

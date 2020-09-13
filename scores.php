@@ -79,6 +79,7 @@ if (isset($_SESSION['userID'])) {
             </tr>
             <?php
             for ($i = 0; $i < sizeof($tests); $i++) {
+                if($tests[$i]['score'] != "NA") {
             ?>
                 <tr>
                     <td><?php echo $tests[$i]['testName']; ?></td>
@@ -87,6 +88,7 @@ if (isset($_SESSION['userID'])) {
                     <!-- <td><a class="button register" href="quizajax.php?id=<?php /*echo $tests[$i]['testID'];*/ ?>">Practice</a></td> -->
                 </tr>
             <?php
+                }
             }
             ?>
         </table>

@@ -24,7 +24,7 @@ require 'header.php';
 
 <body>
     <div class="question">
-        <div class="spacer"></div>
+        <!-- <div class="spacer"></div> -->
         <div class="code">
             <pre><code spellcheck="false" class="language-java line-numbers"></code></pre>
         </div>
@@ -39,18 +39,19 @@ require 'header.php';
             <div class="controller">
                 <label class="ctrl sub">
                     <input type="submit" name="sub" />
-                    <p>Submit</p>
+                    <p class="submit-text">Check</p>
                 </label>
-                <label class="ctrl next">
+                <!-- <label class="ctrl next">
                     <input type="submit" name="next" />
                     <p>&#xf125</p>
-                </label>
+                </label> -->
             </div>
-            <a class="explain" href="#explain" rel="modal:open">Explanation</a>
+            <p class="explain" href="#explain" rel="modal:open">Explanation</a>
+            <p class="explainbody">&nbsp;</p>
         </form>
         <div id="explain" class="modal">
             <h1 class="mod">Explanation</h1>
-            <p class="mod">This is an explanation. Filler text is cool. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, exercitationem consectetur! Possimus animi molestias voluptas consequuntur velit accusantium quia numquam?</p>
+            <p class="mod">&nbsp;This is an explanation. Filler text is cool. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, exercitationem consectetur! Possimus animi molestias voluptas consequuntur velit accusantium quia numquam?</p>
             <a class="button" href="#" rel="modal:close">Okay.</a>
         </div>
     </div>

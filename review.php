@@ -114,14 +114,15 @@ if (isset($_SESSION['userUID'])) {
                     <input type="radio" id=<?php echo "e" . $i; ?> name="radio"><label class="ans" for="e" onclick="select('e')"><?php echo $answers[4]['ansText']; ?></label>
                     <input type="hidden" id=<?php echo "ans" . $i; ?> name="choice" value="" />
                 </form>
-                <a class="explain padded" href=<?php echo "#explain" . $i ?> rel="modal:open">Explanation</a>
+                <p class="explain padded" href=<?php echo "#explain" . $i ?>>Explanation</>
+                <p class="explainbody"><?php echo $questionExplain; ?></p>
                 <div id=<?php echo "explain" . $i ?> class="modal">
                     <h1 class="mod">Explanation</h1>
-                    <p class="mod"><?php echo $questionExplain; ?></p>
+                    <p class="mod"></p>
                     <a class="button" href="#" rel="modal:close">Okay.</a>
                 </div>
             </div>
-            <hr class="thin">
+            <?php echo $i < $testCount ? '<hr class="thin">' : ''?>
         <?php
         }
         ?>
