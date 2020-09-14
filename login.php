@@ -24,7 +24,7 @@ if(isset($_SESSION['testID'])) {
         </div>
         <form id="log" action="./includes/login.inc.php" method="post">
             <input type="umail" name="umail" class="activator" autocomplete="username email" required />
-            <p>Email Address or Username</p>
+            <p>Student ID</p>
             <input type="password" name="password" autocomplete="off" class="activator" autocomplete="current-password" required />
             <p>Password</p>
             <button class="button register" name="login-submit" href="#">Log in</button>
