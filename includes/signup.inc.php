@@ -53,7 +53,7 @@ if (isset($_POST['reg-submit'])) {
             if ($r = mysqli_fetch_assoc($result)) {
                 $email = $r['email'];
                 $name = $r['name'];
-                $admin = 0;
+                $admin = $r['admin'];
                 $hash = password_hash($password, PASSWORD_DEFAULT);
                 $verified = 1;
                 $vkey = password_hash(time() . $username, PASSWORD_DEFAULT);
