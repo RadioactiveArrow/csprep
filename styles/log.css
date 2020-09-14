@@ -165,6 +165,16 @@ form>p {
     color: rgb(252, 97, 97);
 }
 
+.message > a {
+    text-decoration: none;
+    color: #477EDE;
+}
+
+.message > a:hover {
+    text-decoration: underline;
+    color: #2669db;   
+}
+
 .success {
     color: rgb(147, 207, 58);
 }

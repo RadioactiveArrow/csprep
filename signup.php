@@ -41,7 +41,7 @@ if(isset($_SESSION['testID'])) {
                     else if($_GET['error'] == 'sql')
                         echo "SQL Error";
                     else if($_GET['error'] == 'nomember') 
-                        echo "You are not a member of the club!";
+                        echo "You are not a member of the club! <a href='https://forms.gle/fsf77kAQkbEH2KXXA'>Join here.</a>";
                     else if($_GET['error'] == 'passfail')
                         echo "Passwords don't match";
                 }
