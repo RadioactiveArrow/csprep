@@ -20,7 +20,7 @@ if(isset($_SESSION['testID'])) {
     <div class="sign-container">
         <div class="text">
             <h1 class="sign-header">Sign Up</h1>
-            <h3 class="other">Have an account? <a class="other-link" href="login.php">Log in now!</a></h3>
+            <h3 class="other">Have an account? <a class="other-link" href="login.php">Log in now.</a></h3>
         </div>
         <form id="log" action="./includes/signup.inc.php" method="post">
             <input type="id" name="id" class="activator" autocomplete="id" required />
