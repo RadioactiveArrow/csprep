@@ -107,11 +107,11 @@ if (isset($_SESSION['userUID'])) {
                 </div>
                 <form>
                     <h1><em><?php echo $i; ?>)</em> <?php echo $qText; ?></h1>
-                    <input type="radio" id=<?php echo "a" . $i; ?> name="radio"><label class="ans" for="a" onclick="select('a')"><?php echo $answers[0]['ansText']; ?></label>
-                    <input type="radio" id=<?php echo "b" . $i; ?> name="radio"><label class="ans revcorrect" for="b" onclick="select('b')"><?php echo $answers[1]['ansText']; ?></label>
-                    <input type="radio" id=<?php echo "c" . $i; ?> name="radio"><label class="ans" for="c" onclick="select('c')"><?php echo $answers[2]['ansText']; ?></label>
-                    <input type="radio" id=<?php echo "d" . $i; ?> name="radio"><label class="ans" for="d" onclick="select('d')"><?php echo $answers[3]['ansText']; ?></label>
-                    <input type="radio" id=<?php echo "e" . $i; ?> name="radio"><label class="ans" for="e" onclick="select('e')"><?php echo $answers[4]['ansText']; ?></label>
+                    <input type="radio" id=<?php echo "a" . $i; ?> name="radio"><label class="<?php echo $answers[0]['ansCorrect'] ? "ans revcorrect" : "ans"?>" for="a" onclick="select('a')"><?php echo $answers[0]['ansText']; ?></label>
+                    <input type="radio" id=<?php echo "b" . $i; ?> name="radio"><label class="<?php echo $answers[1]['ansCorrect'] ? "ans revcorrect" : "ans"?>" for="b" onclick="select('b')"><?php echo $answers[1]['ansText']; ?></label>
+                    <input type="radio" id=<?php echo "c" . $i; ?> name="radio"><label class="<?php echo $answers[2]['ansCorrect'] ? "ans revcorrect" : "ans"?>" for="c" onclick="select('c')"><?php echo $answers[2]['ansText']; ?></label>
+                    <input type="radio" id=<?php echo "d" . $i; ?> name="radio"><label class="<?php echo $answers[3]['ansCorrect'] ? "ans revcorrect" : "ans"?>" for="d" onclick="select('d')"><?php echo $answers[3]['ansText']; ?></label>
+                    <input type="radio" id=<?php echo "e" . $i; ?> name="radio"><label class="<?php echo $answers[4]['ansCorrect'] ? "ans revcorrect" : "ans"?>" for="e" onclick="select('e')"><?php echo $answers[4]['ansText']; ?></label>
                     <input type="hidden" id=<?php echo "ans" . $i; ?> name="choice" value="" />
                 </form>
                 <p class="explain padded" href=<?php echo "#explain" . $i ?>>Explanation</>

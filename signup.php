@@ -23,12 +23,8 @@ if(isset($_SESSION['testID'])) {
             <h3 class="other">Have an account? <a class="other-link" href="login.php">Log in now!</a></h3>
         </div>
         <form id="log" action="./includes/signup.inc.php" method="post">
-            <input type="name" name="n" class="activator" autocomplete="name" required />
-            <p>Full Name</p>
-            <input type="email" name="e" class="activator" autocomplete="email" required />
-            <p>Email Address</p>
-            <input type="username" name="u" class="activator" autocomplete="username" required />
-            <p>Username</p>
+            <input type="id" name="id" class="activator" autocomplete="id" required />
+            <p>Student ID</p>
             <input type="password" name="p" autocomplete="off" class="activator" autocomplete="current-password" required />
             <p>Password</p>
             <input type="password" name="p2" autocomplete="off" class="activator" autocomplete="current-password" required />
@@ -44,6 +40,8 @@ if(isset($_SESSION['testID'])) {
                         echo "This user already exists.";
                     else if($_GET['error'] == 'sql')
                         echo "SQL Error";
+                    else if($_GET['error'] == 'nomember') 
+                        echo "You are not a member of the club!";
                     else if($_GET['error'] == 'passfail')
                         echo "Passwords don't match";
                 }

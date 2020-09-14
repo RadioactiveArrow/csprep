@@ -63,7 +63,6 @@ form {
 
 form>input {
     margin: 0;
-    padding-top: 5px;
     border: 0;
 
     height: 40px;
@@ -72,15 +71,20 @@ form>input {
 
     background: none;
     outline: none;
-
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
     background: transparent;
     border-bottom: 3px solid #DBDBDB;
+    border-top: 0;
     border-spacing: 10px;
 
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 20px;
+    outline: 0px transparent !important;
+    border-top: 0px transparent !important;
 }
 
 input:-webkit-autofill,
@@ -90,7 +94,14 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+    outline: 0px transparent !important;
+    border-top: 0px transparent !important;
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
 }
 
 form>p {
@@ -149,6 +160,7 @@ form>p {
 }
 
 .message {
+    padding-top: 30px;
     width: 200%;
     color: rgb(252, 97, 97);
 }

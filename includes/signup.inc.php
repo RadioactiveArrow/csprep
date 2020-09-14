@@ -1,58 +1,74 @@
 <?php
-if(isset($_POST['reg-submit'])) {
+if (isset($_POST['reg-submit'])) {
     require 'dbh.php';
-    $name = $_POST['n'];
-    $email = $_POST['e'];
-    $username = $_POST['u'];
+    $studentID = strtoupper($_POST['id']);
     $password = $_POST['p'];
     $password2 = $_POST['p2'];
 
     //checks if any fields are empty but html should do this already so idk sue me
-    if(empty($name) || empty($email) || empty($username) || empty($password) || empty($password2)) {
+    if (empty($studentID) || empty($password) || empty($password2)) {
         header("Location: ../signup.php?error=emptyfields");
         exit();
     }
 
-    if($password != $password2) {
+    if ($password != $password2) {
         header("Location: ../signup.php?error=passfail");
         exit();
     }
 
-    $sql= "SELECT userUID FROM users WHERE userUID=? OR userMail=?";
-    $stmt= mysqli_stmt_init($connect);
-    if(!mysqli_stmt_prepare($stmt, $sql)) {
+    //check is user already exists in this DB
+    $sql = "SELECT userUID FROM users WHERE userUID=?";
+    $stmt = mysqli_stmt_init($connect);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location: ../signup.php?error=sql");
         exit();
-    } 
-    else {
-        mysqli_stmt_bind_param($stmt,"ss",$username,$email);
+    } else {
+        mysqli_stmt_bind_param($stmt, "s", $studentID);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_store_result($stmt);
         $existcount = mysqli_stmt_num_rows($stmt);
-        if($existcount!=0) {
+        if ($existcount != 0) {
             header("Location: ../signup.php?error=exists");
             exit();
         }
     }
 
-    //prepared sql for login
+    //prepared SQL for registration
     $sql = "INSERT INTO users (userUID, userMail, userName, admin, userPass, verified, vkey) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    $stmt= mysqli_stmt_init($connect);
-    if(!mysqli_stmt_prepare($stmt, $sql)) {
+    $stmt = mysqli_stmt_init($connect);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location: ../signup.php?error=sql");
         exit();
     } else {
-        $hash= password_hash($password, PASSWORD_DEFAULT);
-        $vkey= password_hash(time().$username, PASSWORD_DEFAULT);
-	$admin = 0;
-	$verified = 1;
-        mysqli_stmt_bind_param($stmt,"sssisis",$username,$email,$name,$admin,$hash,$verified,$vkey);
-        mysqli_stmt_execute($stmt);
-        header("Location: ../login.php?success=true");
+        //pulls membership data to verify that user is a member of club
+        $sql2 = "SELECT * FROM members WHERE student_id = ? LIMIT 1";
+        $stmt2 = mysqli_stmt_init($connect);
+        if (!mysqli_stmt_prepare($stmt2, $sql2)) {
+            header("Location: ../signup.php?error=sql");
+            exit();
+        } else {
+            mysqli_stmt_bind_param($stmt2, "s", $studentID);
+            mysqli_stmt_execute($stmt2);
+            $result = mysqli_stmt_get_result($stmt2);
+            if ($r = mysqli_fetch_assoc($result)) {
+                $email = $r['email'];
+                $name = $r['name'];
+                $admin = 0;
+                $hash = password_hash($password, PASSWORD_DEFAULT);
+                $verified = 1;
+                $vkey = password_hash(time() . $username, PASSWORD_DEFAULT);
+        
+                mysqli_stmt_bind_param($stmt, "sssisis", $studentID, $email, $name, $admin, $hash, $verified, $vkey);
+                mysqli_stmt_execute($stmt);
+                header("Location: ../login.php?success=true");
+            } else {
+                header("Location: ../signup.php?error=nomember");
+                exit();
+            }
+        }
     }
     mysqli_stmt_close($stmt);
     mysqli_close($connect);
-}
-else {
+} else {
     header("Location: ./signup.php");
 }
