@@ -55,7 +55,7 @@ h2 > a:active, h2 > a:hover:active {
 
 .quiztable {
     width: 90%;
-    margin: 0 5% 0 5%;
+    margin: 0 5% 2em 5%;
     background-color: rgba(255, 255, 255,0.85);
     border-collapse: collapse;
     border-radius: 5px;
@@ -88,8 +88,17 @@ td {
     color: #2A2A2A;
 }
 
+tr.inactive {
+    border: 2px solid red;
+    border-color: rgba(253, 255, 225,0.7);
+}
+
 tr:last-child > td {
     border-bottom: 0px;
+}
+
+.squeezable > * {
+    margin: 0 auto;
 }
 
 .button {
@@ -102,16 +111,17 @@ tr:last-child > td {
 
     color: #FFF;
     background-color: #477EDE;
+    width: max-content;
 
-    padding: 15px 25px;
-    margin: 0;
+    padding: 15px 50px;
+    margin: 0 auto;
 
     opacity: 0.9;
 
     text-align: center;
     border-radius: 10px;
 
-    width: 50%;
+    /* width: 50%; */
     transition: 0.25s;
 
     border: none;
@@ -126,6 +136,19 @@ tr:last-child > td {
 .button:active,
 .button:visited:active {
     background-color: #225dc4;
+}
+
+.accept {
+    /* background-color: #22c473; */
+
+}
+
+.reject {
+    background-color: #c42222;
+}
+
+a.button.inactive {
+    margin: 20px auto;
 }
 
 .take, .take:visited{

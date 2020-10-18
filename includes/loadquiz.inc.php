@@ -62,7 +62,7 @@ if (isset($_SESSION['userUID'])) {
                         $qText = $qData['qText'] = $r['questionText'];
                         $qExplain = $_SESSION['qEx'] = encrypt($r['questionExplanation']);
 
-                        $sql = "SELECT * FROM answers WHERE questionID=?";
+                        $sql = "SELECT * FROM answers WHERE questionID=? ORDER BY ansLetter";
                         $stmt = mysqli_stmt_init($connect);
                         if (!mysqli_stmt_prepare($stmt, $sql)) {
                             echo "<script type='text/javascript'>alert('SQL ERROR 3');</script>";

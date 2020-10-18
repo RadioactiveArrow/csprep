@@ -5,7 +5,12 @@ function getPracticeTests()
     require 'dbh.php';
 
     $tests = array();
-    $sql = "SELECT * FROM tests WHERE active = 1";
+    if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
+        $sql = "SELECT * FROM tests";
+    } else {
+        $sql = "SELECT * FROM tests WHERE active = 1";
+    }
+
     $stmt = mysqli_stmt_init($connect);
     if (isset($_SESSION['testID'])) {
         unset($_SESSION['testID']);
