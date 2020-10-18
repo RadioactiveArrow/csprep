@@ -147,6 +147,10 @@ tr:last-child > td {
     background-color: #c42222;
 }
 
+.reject:hover {
+    background-color: #b41a1a;
+}
+
 a.button.inactive {
     margin: 20px auto;
 }
