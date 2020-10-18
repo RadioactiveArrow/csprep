@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb5
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 10, 2020 at 09:54 PM
+-- Generation Time: Oct 18, 2020 at 04:03 AM
 -- Server version: 5.7.31-0ubuntu0.18.04.1
--- PHP Version: 7.2.24-0ubuntu0.18.04.6
+-- PHP Version: 7.2.24-0ubuntu0.18.04.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `csprep`
+-- Database: `tompkinscs`
 --
 
 -- --------------------------------------------------------
@@ -34,6 +35,22 @@ CREATE TABLE `answers` (
   `ansLetter` char(1) NOT NULL,
   `ansCorrect` bit(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `members`
+--
+
+CREATE TABLE `members` (
+  `student_id` tinytext NOT NULL,
+  `name` tinytext NOT NULL,
+  `grade` tinyint(4) NOT NULL,
+  `email` tinytext NOT NULL,
+  `parent_email` tinytext NOT NULL,
+  `kva` bit(1) NOT NULL,
+  `admin` bit(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -60,7 +77,8 @@ CREATE TABLE `tests` (
   `testID` int(11) NOT NULL,
   `testName` tinytext NOT NULL,
   `testDiff` tinytext NOT NULL,
-  `testQNum` int(11) NOT NULL
+  `testQNum` int(11) NOT NULL,
+  `active` bit(1) NOT NULL DEFAULT b'0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -131,6 +149,12 @@ ALTER TABLE `answers`
   ADD PRIMARY KEY (`ansID`,`questionID`,`testID`);
 
 --
+-- Indexes for table `members`
+--
+ALTER TABLE `members`
+  ADD UNIQUE KEY `student_id` (`student_id`(8));
+
+--
 -- Indexes for table `questions`
 --
 ALTER TABLE `questions`
@@ -174,22 +198,27 @@ ALTER TABLE `usertests`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `ansID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `ansID` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `questionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `questionID` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `tests`
 --
 ALTER TABLE `tests`
-  MODIFY `testID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `testID` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

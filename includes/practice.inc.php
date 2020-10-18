@@ -5,7 +5,7 @@ function getPracticeTests()
     require 'dbh.php';
 
     $tests = array();
-    $sql = "SELECT * FROM tests";
+    $sql = "SELECT * FROM tests WHERE active = 1";
     $stmt = mysqli_stmt_init($connect);
     if (isset($_SESSION['testID'])) {
         unset($_SESSION['testID']);

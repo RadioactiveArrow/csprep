@@ -31,11 +31,11 @@ session_start();
                 <?php
                 if (!isset($_SESSION['userUID']))
                     echo '<a class="content underline" href="signup.php">Sign Up</a>';
-                else if ($_SESSION['admin'] == false)
+                else
                     echo '<a class="content underline" href="practice.php">Home</a>';
-                else if ($_SESSION['admin'] == true) {
-                    echo '<a class="content underline" href="creator.php">Creator</a>';
-                }
+                // else if ($_SESSION['admin'] == true) {
+                    // echo '<a class="content underline" href="creator.php">Creator</a>';
+                // }
                 ?>
 
             </li>

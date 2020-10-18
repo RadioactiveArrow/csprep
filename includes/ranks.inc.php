@@ -13,7 +13,7 @@ function getRankings()
     require 'dbh.php';
 
     $users = array();
-    $sql = "SELECT useranswers.userID, useranswers.userCorrect, users.userUID FROM useranswers INNER JOIN users ON useranswers.userID = users.userID";
+    $sql = "SELECT useranswers.userID, useranswers.userCorrect, users.userUID FROM useranswers INNER JOIN users ON useranswers.userID = users.userID WHERE users.admin = 0 ";
     $stmt = mysqli_stmt_init($connect);
     if (isset($_SESSION['testID'])) {
         unset($_SESSION['testID']);
