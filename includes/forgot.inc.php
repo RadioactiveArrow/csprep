@@ -19,8 +19,11 @@ if (isset($_POST['forgot-submit'])) {
         mysqli_stmt_bind_param($stmt, "s", $studentID);
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
-        if($r = $result->fetch_assoc()) {
-            mail($r['email'],"Password Reset Request from TompkinsCS","Hi");
+        if ($r = $result->fetch_assoc()) {
+            echo ($r['email']);
+            $headers[] = 'MIME-Version: 1.0';
+            $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+            mail($r['email'], "Password Reset Request from TompkinsCS", "Hi",$headers);
         } else {
             header("Location: ../forgot.php?error=nouser");
             exit();

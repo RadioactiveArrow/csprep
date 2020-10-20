@@ -8,26 +8,25 @@ if(isset($_SESSION['testID'])) {
 }
 ?>
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSPrep | Login</title>
+    <title>CSPrep | Reset</title>
     <link rel="stylesheet" href="styles/log.css">
 </head>
 
 <body class="log">
     <div class="sign-container">
         <div class="text">
-            <h1 class="sign-header">Log In</h1>
-            <h3 class="other">No account? <a class="other-link" href="signup.php">Create one now.</a></h3>
+            <h1 class="sign-header">Reset Password</h1>
+            <h3 class="other">Enter new password.</a></h3>
         </div>
-        <form id="log" action="./includes/login.inc.php" method="post">
-            <input type="umail" name="umail" class="activator" autocomplete="username email" required />
-            <p>Student ID</p>
-            <input type="password" name="password" autocomplete="off" class="activator" autocomplete="current-password" required />
+        <form id="log" action="./includes/reset.inc.php?token=<?php echo $_GET['token'];?>" method="post">
+            <input type="password" name="p" class="activator" autocomplete="current-password" required />
             <p>Password</p>
-            <button class="button register" name="login-submit" href="#">Log in</button>
+            <input type="password" name="p2" autocomplete="off" class="activator" autocomplete="current-password" required />
+            <p>Repeat Password</p>
+            <button class="button register" name="res-submit" href="#">Log in</button>
             <p class="message error">
                 <?php
                 if (isset($_GET['error'])) {
@@ -46,7 +45,7 @@ if(isset($_SESSION['testID'])) {
             <p class="message success">
                 <?php
                 if (isset($_GET['success'])) {
-                    echo "Success! Your account has been created";
+                    echo "Success! Your password has been reset.";
                 }
                 ?>
             </p>
