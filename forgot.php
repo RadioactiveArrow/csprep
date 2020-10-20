@@ -1,4 +1,8 @@
 <?php
+// mail($to_email_address,$subject,$message,[$headers],[$parameters]);
+?>
+
+<?php
 require 'header.php';
 if(isset($_SESSION['testID'])) {
     unset($_SESSION['testID']);
@@ -19,15 +23,13 @@ if(isset($_SESSION['testID'])) {
 <body class="log">
     <div class="sign-container">
         <div class="text">
-            <h1 class="sign-header">Log In</h1>
-            <h3 class="other">No account? <a class="other-link" href="signup.php">Create one now.</a></h3>
+            <h1 class="sign-header">Forgot Password</h1>
+            <h3 class="other">We'll send an email to the account we have on file</h3>
         </div>
-        <form id="log" action="./includes/login.inc.php" method="post">
-            <input type="umail" name="umail" class="activator" autocomplete="username email" required />
+        <form id="log" action="./includes/forgot.inc.php" method="post">
+            <input type="id" name="id" class="activator" autocomplete="username email" required />
             <p>Student ID</p>
-            <input type="password" name="password" autocomplete="off" class="activator" autocomplete="current-password" required />
-            <p>Password</p>
-            <button class="button register" name="login-submit" href="#">Log in</button>
+            <button class="button register" name="forgot-submit" href="#">Send!</button>
             <p class="message error">
                 <?php
                 if (isset($_GET['error'])) {
@@ -46,12 +48,11 @@ if(isset($_SESSION['testID'])) {
             <p class="message success">
                 <?php
                 if (isset($_GET['success'])) {
-                    echo "Success! Your account has been created";
+                    echo "Success! An email has been sent to the address you signed up with";
                 }
                 ?>
             </p>
         </form>
-        <h3 class="other"><a class="other-link" href="forgot.php">Forgot your password? Reset it.</a></h3>
     </div>
     <a href="index.php"><img class="logo-large" src="media/header/logo.png" /></a>
 </body>
